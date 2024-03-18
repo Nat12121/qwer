@@ -1,0 +1,22 @@
+[package]
+name = "dot"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#anyhow = "1.0"
+winit = { version = "0.29.15", default-features = false, features = [ "rwh_05", "wayland", "x11" ] }
+vulkano = "0.34.1"
+#game-loop = "1.0.0"
+rodio = { version = "0.17.3", default-features = false }
+gecs = "0.3.0"
+#mimalloc = { version = "0.1.39", default-features = false }
+#egui = "0.26.0"
+#egui-winit = "0.26.0"
+#skia-safe = "0.70.0"
+#egui_skia = { path = "../egui_skia", features = [ "cpu_fix" ] }
+
+[build-dependencies]
+spirv-builder = { git = "https://github.com/EmbarkStudios/rust-gpu.git", rev = "54f6978" }
